@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 6903072026789147393}
   - component: {fileID: 4174852079698432333}
   - component: {fileID: 9091458664017956352}
+  - component: {fileID: 7883088511326293301}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -364,12 +365,27 @@ MonoBehaviour:
   syncInterval: 0.1
   weapon:
     name: Revolver
-    damage: 1
+    damage: 100
     range: 100
   cam: {fileID: 7612636259972576627}
   mask:
     serializedVersion: 2
     m_Bits: 567
+--- !u!114 &7883088511326293301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7612636259482083532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5107add203d62de44901b1df9ce2a321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  maxHealth: 100
 --- !u!1 &7612636259803952090
 GameObject:
   m_ObjectHideFlags: 0
