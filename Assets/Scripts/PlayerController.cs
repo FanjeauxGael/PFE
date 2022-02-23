@@ -2,6 +2,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerMotor))]
+[RequireComponent(typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
@@ -12,22 +13,28 @@ public class PlayerController : MonoBehaviour
 
     private PlayerMotor motor;
 
+    private Animator animator;
+
     private void Start()
     {
         //récupere PlayerMotor 
         motor = GetComponent<PlayerMotor>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
         // Calculer la vitesse du mouvement de notre joueur
-        float xMov = Input.GetAxisRaw("Horizontal");
-        float zMov = Input.GetAxisRaw("Vertical");
+        float xMov = Input.GetAxis("Horizontal");
+        float zMov = Input.GetAxis("Vertical");
 
         Vector3 moveHorizontal = transform.right * xMov;
         Vector3 moveVertical = transform.forward * zMov;
 
-        Vector3 velocity = (moveHorizontal + moveVertical).normalized * speed;
+        Vector3 velocity = (moveHorizontal + moveVertical) * speed;
+
+        // Jouer animation
+        animator.SetFloat("ForwardVelocity", zMov);
 
         motor.Move(velocity);
 

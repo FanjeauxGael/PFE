@@ -13,7 +13,7 @@ public class Player : NetworkBehaviour
     }
 
     [SerializeField]
-    private float maxHealth = 100f;
+    private float maxHealth = 1f;
 
     [SyncVar]
     private float currentHealth;

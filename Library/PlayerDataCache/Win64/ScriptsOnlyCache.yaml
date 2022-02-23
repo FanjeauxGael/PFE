@@ -58,39 +58,45 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12484}
+      Script: {instanceID: 14732}
     - Class: 114
-      Script: {instanceID: 12520}
+      Script: {instanceID: 14768}
     - Class: 114
-      Script: {instanceID: 12630}
+      Script: {instanceID: 14878}
     - Class: 114
-      Script: {instanceID: 12634}
+      Script: {instanceID: 14882}
     - Class: 114
-      Script: {instanceID: 12792}
+      Script: {instanceID: 15038}
     - Class: 114
-      Script: {instanceID: 12882}
+      Script: {instanceID: 15128}
     - Class: 114
-      Script: {instanceID: 13184}
+      Script: {instanceID: 15428}
     - Class: 114
-      Script: {instanceID: 13900}
+      Script: {instanceID: 16140}
     - Class: 114
-      Script: {instanceID: 14572}
+      Script: {instanceID: 16798}
     - Class: 114
-      Script: {instanceID: 14734}
+      Script: {instanceID: 16960}
     - Class: 114
-      Script: {instanceID: 14784}
+      Script: {instanceID: 17008}
     - Class: 114
-      Script: {instanceID: 14920}
+      Script: {instanceID: 17144}
     - Class: 114
-      Script: {instanceID: 15134}
+      Script: {instanceID: 17358}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -1106,4 +1112,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/Documents/Build/PFE.exe
+  playerPath: E:/projet/PFE/PFE/Build/PFE.exe
