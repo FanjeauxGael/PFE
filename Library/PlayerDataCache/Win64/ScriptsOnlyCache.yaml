@@ -7,6 +7,8 @@ ScriptsOnlyBuild:
     - PlayerMotor
     - PlayerSetup
     - PlayerShoot
+    - WeaponGraphics
+    - WeaponManager
     Mirror.Components.dll:
     - Mirror.NetworkAnimator
     - Mirror.NetworkTransform
@@ -19,6 +21,7 @@ ScriptsOnlyBuild:
     - kcp2k.KcpTransport
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+<<<<<<< HEAD
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -27,6 +30,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
+=======
+>>>>>>> 7d75c1d1c9c690b395bcdd24210dad5091b073f6
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -80,7 +85,11 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 12396}
+=======
+      Script: {instanceID: 11724}
+>>>>>>> 7d75c1d1c9c690b395bcdd24210dad5091b073f6
     - Class: 114
       Script: {instanceID: 12486}
     - Class: 114
@@ -100,6 +109,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13246}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 13900}
     - Class: 114
       Script: {instanceID: 13902}
@@ -117,6 +127,27 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15028}
     - Class: 114
       Script: {instanceID: 15136}
+=======
+      Script: {instanceID: 13118}
+    - Class: 114
+      Script: {instanceID: 13258}
+    - Class: 114
+      Script: {instanceID: 13866}
+    - Class: 114
+      Script: {instanceID: 13934}
+    - Class: 114
+      Script: {instanceID: 14098}
+    - Class: 114
+      Script: {instanceID: 14148}
+    - Class: 114
+      Script: {instanceID: 14284}
+    - Class: 114
+      Script: {instanceID: 14390}
+    - Class: 114
+      Script: {instanceID: 14426}
+    - Class: 114
+      Script: {instanceID: 14500}
+>>>>>>> 7d75c1d1c9c690b395bcdd24210dad5091b073f6
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -126,6 +157,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -142,16 +177,37 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 8617aadb248da95f2695ca5669494400
-    assemblyName: Mirror.dll
-    namespaceName: Mirror
-    className: TelepathyTransport
+<<<<<<< HEAD
+=======
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: 7ab0e790220bdca831fdd886b339039d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GridLayoutGroup
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 699619b86d9359741a4f58540298c80b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
+>>>>>>> 7d75c1d1c9c690b395bcdd24210dad5091b073f6
+      Hash: 8617aadb248da95f2695ca5669494400
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: TelepathyTransport
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -346,7 +402,11 @@ ScriptsOnlyBuild:
     className: NetworkRigidbody2D
   - hash:
       serializedVersion: 2
+<<<<<<< HEAD
       Hash: 36b02f80315ecfb91c1e6c3604623265
+=======
+      Hash: 427fba7773d85104c94c90868fb4109d
+>>>>>>> 7d75c1d1c9c690b395bcdd24210dad5091b073f6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerShoot
@@ -650,6 +710,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror.Experimental
     className: NetworkLerpRigidbody
+  - hash:
+      serializedVersion: 2
+      Hash: fbd5fa7806257e09a1945ad1c89c8303
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WeaponGraphics
   - hash:
       serializedVersion: 2
       Hash: b18f0d55b218ff8d17c2c7411b02c1bf
@@ -1106,6 +1172,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: af0d4840e2212bb69b7f286803ad8deb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WeaponManager
   - hash:
       serializedVersion: 2
       Hash: 0c05f2bfb402def3f0a85a62a2323c7f

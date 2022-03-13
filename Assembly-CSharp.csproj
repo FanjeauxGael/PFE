@@ -61,8 +61,11 @@
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\MatchSettings.cs" />
+     <Compile Include="Assets\WeaponGraphics.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\PlayerSetup.cs" />
+     <Compile Include="Assets\WeaponManager.cs" />
+     <Compile Include="Assets\Util.cs" />
      <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
      <None Include="Assets\ScriptTemplates\56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" />
      <None Include="Assets\multiplayer-fps-assets\README.txt" />

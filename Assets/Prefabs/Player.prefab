@@ -26,8 +26,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.216, y: -0.16, z: 0.334}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1982788984248002241}
+  m_Children: []
   m_Father: {fileID: 7612636259972576625}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -82,7 +81,11 @@ GameObject:
   - component: {fileID: 9091458664017956352}
   - component: {fileID: 7883088511326293301}
   - component: {fileID: 8478970184225125174}
+<<<<<<< HEAD
   - component: {fileID: 3056089458584698947}
+=======
+  - component: {fileID: 819272468}
+>>>>>>> 7d75c1d1c9c690b395bcdd24210dad5091b073f6
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -199,9 +202,13 @@ MonoBehaviour:
   - {fileID: 7612636259482083521}
   - {fileID: 7612636259972576627}
   - {fileID: 7612636259972576624}
+<<<<<<< HEAD
   - {fileID: 9091458664017956352}
   - {fileID: 7612636259972576627}
   - {fileID: 8478970184225125174}
+=======
+  - {fileID: 7837912724135862053}
+>>>>>>> 7d75c1d1c9c690b395bcdd24210dad5091b073f6
   remoteLayerName: RemotePlayer
   playerUIPrefab: {fileID: 2021082810289475980, guid: 0aba1f17b5f58e5479b3d46bae869abd, type: 3}
 --- !u!114 &6903072026789147393
@@ -287,16 +294,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  weapon:
-    name: Revolver
-    damage: 100
-    range: 100
-  weaponGFX: {fileID: 1982788984248433377}
-  weaponLayerName: Weapon
   cam: {fileID: 7612636259972576627}
   mask:
     serializedVersion: 2
-    m_Bits: 567
+    m_Bits: 823
 --- !u!114 &7883088511326293301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  maxHealth: 1
+  maxHealth: 100
   disableOnDeath:
   - {fileID: 9091458664017956352}
   - {fileID: 7612636259482083521}
@@ -334,7 +335,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+<<<<<<< HEAD
 --- !u!114 &3056089458584698947
+=======
+--- !u!114 &819272468
+>>>>>>> 7d75c1d1c9c690b395bcdd24210dad5091b073f6
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -343,6 +348,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7612636259482083532}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -350,6 +356,21 @@ MonoBehaviour:
   syncInterval: 0.1
   clientAuthority: 1
   animator: {fileID: 8478970184225125174}
+=======
+  m_Script: {fileID: 11500000, guid: 9936ce7fd75e9df4aa7de057b77bf7e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  primaryWeapon:
+    name: Revolver
+    damage: 100
+    range: 100
+    fireRate: 1
+    graphics: {fileID: 8474319020559611498, guid: 60eb83a5c355b7c48a3ee625481e55d8, type: 3}
+  weaponHolder: {fileID: 5185232409374758188}
+  weaponLayerName: Weapon
+>>>>>>> 7d75c1d1c9c690b395bcdd24210dad5091b073f6
 --- !u!1 &7612636259972576638
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,73 +539,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7881728271195097157}
   m_Enabled: 1
---- !u!1001 &1982788984248400961
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 5185232409374758188}
-    m_Modifications:
-    - target: {fileID: 100000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-      propertyPath: m_Name
-      value: SM_Tri-Revolver
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.048
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
---- !u!1 &1982788984248433377 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-  m_PrefabInstance: {fileID: 1982788984248400961}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1982788984248002241 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: b9b7f814120cc114688b5c66fb600bb9, type: 3}
-  m_PrefabInstance: {fileID: 1982788984248400961}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6598355789333097546
 PrefabInstance:
   m_ObjectHideFlags: 0
