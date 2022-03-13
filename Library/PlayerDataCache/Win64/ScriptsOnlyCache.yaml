@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - PlayerSetup
     - PlayerShoot
     Mirror.Components.dll:
+    - Mirror.NetworkAnimator
     - Mirror.NetworkTransform
     - Mirror.NetworkTransformChild
     Mirror.dll:
@@ -21,9 +22,11 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationBlendTree.Node
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -77,41 +80,43 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11752}
+      Script: {instanceID: 12396}
     - Class: 114
-      Script: {instanceID: 11842}
+      Script: {instanceID: 12486}
     - Class: 114
-      Script: {instanceID: 11878}
+      Script: {instanceID: 12522}
     - Class: 114
-      Script: {instanceID: 11988}
+      Script: {instanceID: 12632}
     - Class: 114
-      Script: {instanceID: 11992}
+      Script: {instanceID: 12636}
     - Class: 114
-      Script: {instanceID: 12054}
+      Script: {instanceID: 12700}
     - Class: 114
-      Script: {instanceID: 12146}
+      Script: {instanceID: 12794}
     - Class: 114
-      Script: {instanceID: 12236}
+      Script: {instanceID: 12884}
     - Class: 114
-      Script: {instanceID: 12538}
+      Script: {instanceID: 13186}
     - Class: 114
-      Script: {instanceID: 12598}
+      Script: {instanceID: 13246}
     - Class: 114
-      Script: {instanceID: 13256}
+      Script: {instanceID: 13900}
     - Class: 114
-      Script: {instanceID: 13864}
+      Script: {instanceID: 13902}
     - Class: 114
-      Script: {instanceID: 13932}
+      Script: {instanceID: 14510}
     - Class: 114
-      Script: {instanceID: 14096}
+      Script: {instanceID: 14574}
     - Class: 114
-      Script: {instanceID: 14146}
+      Script: {instanceID: 14736}
     - Class: 114
-      Script: {instanceID: 14282}
+      Script: {instanceID: 14786}
     - Class: 114
-      Script: {instanceID: 14388}
+      Script: {instanceID: 14922}
     - Class: 114
-      Script: {instanceID: 14496}
+      Script: {instanceID: 15028}
+    - Class: 114
+      Script: {instanceID: 15136}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -135,24 +140,6 @@ ScriptsOnlyBuild:
     - Class: 850595691
       Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: caa533b001ae39b864ba8425019e2268
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Outline
-  - hash:
-      serializedVersion: 2
-      Hash: 7ab0e790220bdca831fdd886b339039d
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GridLayoutGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 699619b86d9359741a4f58540298c80b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
   - hash:
       serializedVersion: 2
       Hash: 8617aadb248da95f2695ca5669494400
@@ -293,6 +280,12 @@ ScriptsOnlyBuild:
     className: PhysicsCollision
   - hash:
       serializedVersion: 2
+      Hash: 699619b86d9359741a4f58540298c80b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
       Hash: fd8b23ad3c9e81bc85b197495bc510ac
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -341,13 +334,19 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: 7ab0e790220bdca831fdd886b339039d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
       Hash: 37c782056623a482d772a08897449977
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror.Experimental
     className: NetworkRigidbody2D
   - hash:
       serializedVersion: 2
-      Hash: 3ac8a81bbcdb4c6da88a461d6972cd57
+      Hash: 36b02f80315ecfb91c1e6c3604623265
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerShoot
@@ -479,7 +478,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 15d3986e43736da0e02b72eb6bd6d5a7
+      Hash: 564c028199ec8de91db71075c52adb5a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1037,6 +1036,12 @@ ScriptsOnlyBuild:
     className: NetworkTransformChild
   - hash:
       serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Outline
+  - hash:
+      serializedVersion: 2
       Hash: bb195097b676ccc5aabec194218ae4db
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
@@ -1140,4 +1145,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Damien/Documents/GitHub/PFE/Build/PFE.exe
+  playerPath: E:/projet/FixPFE/PFE/Build/PFE.exe

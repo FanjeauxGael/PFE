@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     private PlayerMotor motor;
 
+    [SerializeField]
     private Animator animator;
 
     private void Start()
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
         // Jouer animation
         animator.SetFloat("ForwardVelocity", zMov);
+        animator.SetFloat("StrafVelocity", xMov);
 
         motor.Move(velocity);
 

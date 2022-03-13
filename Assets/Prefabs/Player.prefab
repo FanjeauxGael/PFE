@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 9091458664017956352}
   - component: {fileID: 7883088511326293301}
   - component: {fileID: 8478970184225125174}
+  - component: {fileID: 3056089458584698947}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -161,6 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   mouseSensitivity: 7
+  animator: {fileID: 8478970184225125174}
 --- !u!114 &-2784894627929905831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +201,7 @@ MonoBehaviour:
   - {fileID: 7612636259972576624}
   - {fileID: 9091458664017956352}
   - {fileID: 7612636259972576627}
+  - {fileID: 8478970184225125174}
   remoteLayerName: RemotePlayer
   playerUIPrefab: {fileID: 2021082810289475980, guid: 0aba1f17b5f58e5479b3d46bae869abd, type: 3}
 --- !u!114 &6903072026789147393
@@ -331,6 +334,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3056089458584698947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7612636259482083532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 1
+  syncInterval: 0.1
+  clientAuthority: 1
+  animator: {fileID: 8478970184225125174}
 --- !u!1 &7612636259972576638
 GameObject:
   m_ObjectHideFlags: 0
