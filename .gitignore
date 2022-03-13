@@ -1,3 +1,6 @@
 .\Assets\Character\Ch15_nonPBR.fbx
-.\Library
-.\Logs
+.\Library\PackageCache\
+.\Library\ShaderCache\
+.\Library\StateCache\
+.\Library\PlayerDataCache\
+.\Logs\
