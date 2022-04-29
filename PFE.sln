@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror.Examples", "Mirror.E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror.Components", "Mirror.Components.csproj", "{0F9B0E11-E908-5764-CA7E-67B4E7AA3981}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{76BAEB3C-073F-7F8B-F2A6-AFEECA453095}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "where-allocations", "where-allocations.csproj", "{7F141969-3655-396E-A1DC-E3FB27611C43}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kcp2k", "kcp2k.csproj", "{67903980-30EF-060A-56C1-971815132A16}"
@@ -55,6 +57,10 @@ Global
 		{0F9B0E11-E908-5764-CA7E-67B4E7AA3981}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F9B0E11-E908-5764-CA7E-67B4E7AA3981}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F9B0E11-E908-5764-CA7E-67B4E7AA3981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76BAEB3C-073F-7F8B-F2A6-AFEECA453095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76BAEB3C-073F-7F8B-F2A6-AFEECA453095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76BAEB3C-073F-7F8B-F2A6-AFEECA453095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76BAEB3C-073F-7F8B-F2A6-AFEECA453095}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7F141969-3655-396E-A1DC-E3FB27611C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7F141969-3655-396E-A1DC-E3FB27611C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F141969-3655-396E-A1DC-E3FB27611C43}.Release|Any CPU.ActiveCfg = Release|Any CPU

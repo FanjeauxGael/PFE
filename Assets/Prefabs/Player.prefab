@@ -203,6 +203,7 @@ MonoBehaviour:
   - {fileID: 8478970184225125174}
   remoteLayerName: RemotePlayer
   playerUIPrefab: {fileID: 2021082810289475980, guid: 0aba1f17b5f58e5479b3d46bae869abd, type: 3}
+  playerUIInstance: {fileID: 0}
 --- !u!114 &6903072026789147393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,6 +309,11 @@ MonoBehaviour:
   disableOnDeath:
   - {fileID: 9091458664017956352}
   - {fileID: 7612636259482083521}
+  disableGameObjectsOnDeath:
+  - {fileID: 7612636258816844613}
+  - {fileID: 7612636259972576638}
+  deathEffect: {fileID: 4549218189759644176, guid: 1a8a5ff7e75896b4c8426afa72fd4915, type: 3}
+  spawnEffect: {fileID: 8347628646555370820, guid: 060b04b4b177269479e4b86016644f0a, type: 3}
 --- !u!95 &8478970184225125174
 Animator:
   serializedVersion: 3
@@ -437,7 +443,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
+  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10

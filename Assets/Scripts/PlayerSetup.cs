@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using Mirror;
 
+[RequireComponent(typeof(Player))]
+[RequireComponent(typeof(PlayerController))]
 public class PlayerSetup : NetworkBehaviour
 {
     [SerializeField]
@@ -11,9 +13,9 @@ public class PlayerSetup : NetworkBehaviour
 
     [SerializeField]
     private GameObject playerUIPrefab;
-    private GameObject playerUIInstance;
 
-    Camera sceneCamera;
+    [HideInInspector]
+    public GameObject playerUIInstance;
 
     private void Start()
     {
@@ -24,17 +26,25 @@ public class PlayerSetup : NetworkBehaviour
         }
         else
         {
-            sceneCamera = Camera.main;
-            if(sceneCamera != null)
-            {
-                sceneCamera.gameObject.SetActive(false);
-            }
+            
 
             // Création du UI du joueur local
             playerUIInstance = Instantiate(playerUIPrefab);
+
+            //Configuration du UI
+            PlayerUI ui = playerUIInstance.GetComponent<PlayerUI>();
+            if(ui == null)
+            {
+                Debug.LogError("Pas de component PlayerUI sur playerUIInstance");
+            }
+            else
+            {
+                ui.SetController(GetComponent<PlayerController>());
+            }
+
+            GetComponent<Player>().Setup();
         }
 
-        GetComponent<Player>().Setup();
     }
 
     public override void OnStartClient()
@@ -65,9 +75,9 @@ public class PlayerSetup : NetworkBehaviour
     {
         Destroy(playerUIInstance);
 
-        if(sceneCamera != null)
+        if (isLocalPlayer)
         {
-            sceneCamera.gameObject.SetActive(true);
+            GameManager.instance.SetSceneCameraActive(true);
         }
 
         GameManager.UnregisterPlayer(transform.name);
