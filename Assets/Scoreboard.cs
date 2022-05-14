@@ -16,7 +16,6 @@ public class Scoreboard : MonoBehaviour
 
         foreach (Player player  in players)
         {
-            Debug.Log(player.name + " _ " + player.kills + " - " + player.deaths);
             GameObject itemGO = Instantiate(playerScoreboardItem, playerScoreboardList);
             PlayerScoreboardItem item = itemGO.GetComponent<PlayerScoreboardItem>();
             if(item != null)
