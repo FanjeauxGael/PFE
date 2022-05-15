@@ -64,8 +64,6 @@ public class WeaponManager : NetworkBehaviour
             yield break;
         }
 
-        Debug.Log("Reloading ...");
-
         isReloading = true;
 
         CmdOnReload();
@@ -75,7 +73,6 @@ public class WeaponManager : NetworkBehaviour
 
         isReloading = false;
 
-        Debug.Log("Reloading Finish");
     }
 
     [Command]
