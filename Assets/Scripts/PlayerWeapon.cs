@@ -9,5 +9,9 @@ public class PlayerWeapon
 
     public float fireRate = 0f;
 
+    public int magazineSize = 2;
+
+    public float reloadTime = 1.5f;
+
     public GameObject graphics;
 }
