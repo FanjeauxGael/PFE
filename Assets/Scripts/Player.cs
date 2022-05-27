@@ -81,20 +81,20 @@ public class Player : NetworkBehaviour
             disableOnDeath[i].enabled = wasEnabledOnStart[i];
         }
 
+        Collider col = GetComponent<Collider>();
+        if (col != null)
+        {
+            col.enabled = true;
+        }
+
         // Réactive les gameobjects du joueur lors de la mort
         for (int i = 0; i < disableGameObjectsOnDeath.Length; i++)
         {
             disableGameObjectsOnDeath[i].SetActive(true);
         }
 
-        Collider col = GetComponent<Collider>();
-        if(col != null)
-        {
-            col.enabled = true;
-        }
-
         // Apparition dy système de particules de respawn
-        GameObject _gfxIns = Instantiate(spawnEffect, transform.position, Quaternion.identity);
+        GameObject _gfxIns = Instantiate(spawnEffect, new Vector3(transform.position.x, transform.position.y - 15 , transform.position.z), Quaternion.identity);
         Destroy(_gfxIns, 3f);
     }
 
@@ -102,7 +102,7 @@ public class Player : NetworkBehaviour
     {
         yield return new WaitForSeconds(GameManager.instance.matchSettings.respawnTimer);
         Transform spawnPoint = NetworkManager.singleton.GetStartPosition();
-        transform.position = spawnPoint.position;
+        transform.position = new Vector3(spawnPoint.position.x, spawnPoint.position.y + 20, spawnPoint.position.z);
         transform.rotation = spawnPoint.rotation;
 
         yield return new WaitForSeconds(0.1f);

@@ -134,7 +134,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &7612636259482083520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +311,8 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   maxHealth: 100
+  kills: 0
+  deaths: 0
   disableOnDeath:
   - {fileID: 9091458664017956352}
   - {fileID: 7612636259482083521}
@@ -357,9 +359,13 @@ MonoBehaviour:
     damage: 100
     range: 100
     fireRate: 1
+    magazineSize: 2
+    reloadTime: 1.5
     graphics: {fileID: 8474319020559611498, guid: 60eb83a5c355b7c48a3ee625481e55d8, type: 3}
   weaponHolder: {fileID: 5185232409374758188}
   weaponLayerName: Weapon
+  currentMagazineSize: 0
+  isReloading: 0
 --- !u!114 &619244563
 MonoBehaviour:
   m_ObjectHideFlags: 0
