@@ -296,6 +296,10 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 823
+  shootingSystem: {fileID: 0}
+  impactParticleSystem: {fileID: 0}
+  bulletTrail: {fileID: 0}
+  bouncingBullets: 1
 --- !u!114 &7883088511326293301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,9 +362,11 @@ MonoBehaviour:
     name: Revolver
     damage: 100
     range: 100
+    speed: 100
     fireRate: 1
     magazineSize: 2
     reloadTime: 1.5
+    bounceDistance: 10
     graphics: {fileID: 8474319020559611498, guid: 60eb83a5c355b7c48a3ee625481e55d8, type: 3}
   weaponHolder: {fileID: 5185232409374758188}
   weaponLayerName: Weapon

@@ -9718,3 +9718,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   muzzleFlash: {fileID: 468629166501470481}
   hitEffectPrefab: {fileID: 2756779637482105068, guid: dd8c0ddeb397d9345bb8d074cbe1faac, type: 3}
+  bulletTrail: {fileID: 328621789431213768, guid: 43559d27d223bf340b413fde1315c256, type: 3}

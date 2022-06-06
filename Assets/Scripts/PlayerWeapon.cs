@@ -6,12 +6,15 @@ public class PlayerWeapon
     public string name = "Revolver";
     public int damage = 100;
     public float range = 100f;
+    public float speed = 100;
 
     public float fireRate = 0f;
 
     public int magazineSize = 2;
 
     public float reloadTime = 1.5f;
+
+    public float bounceDistance = 10f;
 
     public GameObject graphics;
 }
