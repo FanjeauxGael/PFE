@@ -157,6 +157,10 @@ public class Player : NetworkBehaviour
         for (int i = 0; i < disableOnDeath.Length; i++)
         {
             disableOnDeath[i].enabled = false;
+            if (disableOnDeath[i] is PlayerShoot)
+            {
+                ((PlayerShoot)disableOnDeath[i]).CancelShoot();
+            }
         }
 
 
@@ -184,6 +188,7 @@ public class Player : NetworkBehaviour
         }
 
         Debug.Log(transform.name + "a été éliminé.");
+
 
         StartCoroutine(Respawn());
     }

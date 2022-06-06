@@ -65,6 +65,11 @@ public class PlayerShoot : NetworkBehaviour
         
     }
 
+    public void CancelShoot()
+    {
+        CancelInvoke("Shoot");
+    }
+
     [Command]
     void CmdOnHit(Vector3 pos, Vector3 normal)
     {
