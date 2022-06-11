@@ -81,7 +81,7 @@ public class WeaponManager : NetworkBehaviour
         RpcOnReload();
     }
 
-    [Client]
+    [ClientRpc]
     void RpcOnReload()
     {
         Animator animator = currentGraphics.GetComponent<Animator>();
@@ -89,5 +89,8 @@ public class WeaponManager : NetworkBehaviour
         {
             animator.SetTrigger("Reload");
         }
+
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(currentWeapon.reloadSound);
     }
 }

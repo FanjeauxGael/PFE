@@ -17,4 +17,8 @@ public class PlayerWeapon
     public float bounceDistance = 10f;
 
     public GameObject graphics;
+
+    public AudioClip shootSound;
+    public AudioClip reloadSound;
+    public AudioClip bounceSound;
 }

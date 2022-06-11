@@ -38,6 +38,9 @@ public class Player : NetworkBehaviour
 
     private bool firstSetup = true;
 
+    [SerializeField]
+    private AudioClip deathSound;
+
     public void Setup()
     {
         if(isLocalPlayer)
@@ -137,6 +140,8 @@ public class Player : NetworkBehaviour
         if(currentHealth <= 0)
         {
             Die(sourceID);
+            AudioSource audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(deathSound);
         }
     }
 
@@ -145,10 +150,11 @@ public class Player : NetworkBehaviour
         isDead = true;
 
         Player sourcePlayer = GameManager.GetPlayer(sourceID);
-        if(sourcePlayer != null)
+        if(sourcePlayer != null && sourcePlayer.name != transform.name)
         {
             sourcePlayer.kills++;
             GameManager.instance.onPlayerKilledCallback.Invoke(transform.name, sourcePlayer.name);
+            
         }
 
         deaths++;

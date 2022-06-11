@@ -95,12 +95,17 @@ public class PlayerShoot : NetworkBehaviour
     void RpcDoShootEffect()
     {
         weaponManager.GetCurrentGraphics().muzzleFlash.Play();
+
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(currentWeapon.shootSound);
     }
 
     [Command]
     void CmdOnRicocheting(Vector3 position, Quaternion quaternion)
     {
         RpcTrailEffect(position, quaternion);
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(currentWeapon.bounceSound);
     }
 
     [ClientRpc]
