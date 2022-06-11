@@ -101,17 +101,37 @@ public class PlayerShoot : NetworkBehaviour
     }
 
     [Command]
-    void CmdOnRicocheting(Vector3 position, Quaternion quaternion)
+    void CmdOnRicocheting()
     {
-        RpcTrailEffect(position, quaternion);
+        RpcTrailEffect();
         AudioSource audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(currentWeapon.bounceSound);
     }
 
     [ClientRpc]
-    void RpcTrailEffect(Vector3 position, Quaternion quaternion)
+    void RpcTrailEffect()
     {
-        Instantiate(weaponManager.GetCurrentGraphics().bulletTrail, position, quaternion);
+        RaycastHit hit;
+        Vector3 direction = transform.forward;
+        //CmdOnRicocheting(cam.transform.position, Quaternion.identity);
+        TrailRenderer trail = Instantiate(weaponManager.GetCurrentGraphics().bulletTrail, cam.transform.position, Quaternion.identity);
+
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, currentWeapon.range, mask))
+        {
+
+
+            if (hit.collider.tag == "Player")
+            {
+                StartCoroutine(SpawnTrail(trail, hit.point, hit.normal, 0f, false));
+                CmdPlayerShot(hit.collider.name, currentWeapon.damage, transform.name);
+            }
+            StartCoroutine(SpawnTrail(trail, hit.point, hit.normal, currentWeapon.bounceDistance, true));
+
+        }
+        else
+        {
+            StartCoroutine(SpawnTrail(trail, direction * 100, Vector3.zero, currentWeapon.bounceDistance, false));
+        }
     }
 
     [Client]
@@ -131,28 +151,7 @@ public class PlayerShoot : NetworkBehaviour
         weaponManager.currentMagazineSize--;
 
         CmdOnShoot();
-
-        RaycastHit hit;
-        Vector3 direction = transform.forward;
-        CmdOnRicocheting(cam.transform.position, Quaternion.identity);
-        TrailRenderer trail = Instantiate(weaponManager.GetCurrentGraphics().bulletTrail, cam.transform.position, Quaternion.identity);
-
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, currentWeapon.range, mask))
-        {
-            
-
-            if (hit.collider.tag == "Player")
-            {
-                StartCoroutine(SpawnTrail(trail, hit.point, hit.normal, 0f, false));
-                CmdPlayerShot(hit.collider.name, currentWeapon.damage, transform.name);
-            }
-            StartCoroutine(SpawnTrail(trail, hit.point, hit.normal, currentWeapon.bounceDistance, true));
-
-        }
-        else
-        {
-            StartCoroutine(SpawnTrail(trail, direction * 100, Vector3.zero, currentWeapon.bounceDistance, false));
-        }
+        CmdOnRicocheting();
 
         if (weaponManager.currentMagazineSize <= 0)
         {
@@ -182,7 +181,7 @@ public class PlayerShoot : NetworkBehaviour
 
         if (madeImpact)
         {
-            CmdOnRicocheting(hitPoint, Quaternion.LookRotation(hitNormal));
+            //CmdOnRicocheting(hitPoint, Quaternion.LookRotation(hitNormal));
 
             if (bouncingBullets && bounceDistance > 0) 
             {
