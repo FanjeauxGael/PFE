@@ -387,6 +387,7 @@ MonoBehaviour:
   deathEffect: {fileID: 4549218189759644176, guid: 1a8a5ff7e75896b4c8426afa72fd4915, type: 3}
   spawnEffect: {fileID: 8347628646555370820, guid: 060b04b4b177269479e4b86016644f0a, type: 3}
   deathSound: {fileID: 8300000, guid: c3fa1f356d7b3b341a746e7ef858f74f, type: 3}
+  scoreboard: {fileID: 7049184229836555239, guid: 7cef7f861f36c414db251a2737e0dbae, type: 3}
 --- !u!95 &8478970184225125174
 Animator:
   serializedVersion: 3

@@ -74,6 +74,10 @@ public class Player : NetworkBehaviour
         SetDefaults();
     }
 
+    public void showScoreboard()
+    {
+        GetComponent<PlayerSetup>().getPlayerUIPrefab().GetComponent<PlayerUI>().SetActiveScoreboard(true);
+    }
     public void SetDefaults()
     {
         isDead = false;
@@ -187,15 +191,17 @@ public class Player : NetworkBehaviour
         GameObject _gfxIns = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(_gfxIns, 3f);
 
-        if(isLocalPlayer)
+        GameManager.instance.checkKills();
+
+        if (isLocalPlayer)
         {
             GameManager.instance.SetSceneCameraActive(true);
             GetComponent<PlayerSetup>().playerUIInstance.SetActive(false);
         }
 
         Debug.Log(transform.name + "a été éliminé.");
-
-
+      
         StartCoroutine(Respawn());
+
     }
 }

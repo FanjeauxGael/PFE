@@ -71,6 +71,11 @@ public class PlayerSetup : NetworkBehaviour
         }
     }
 
+    public GameObject getPlayerUIPrefab()
+    {
+        return playerUIPrefab;
+    }
+
     private void OnDisable()
     {
         Destroy(playerUIInstance);

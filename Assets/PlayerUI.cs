@@ -19,6 +19,7 @@ public class PlayerUI : MonoBehaviour
     public void SetPlayer(Player _player)
     {
         player = _player;
+        SetActiveScoreboard(false);
         controller = player.GetComponent<PlayerController>();
         weaponManager = player.GetComponent<WeaponManager>();
     }
@@ -39,10 +40,10 @@ public class PlayerUI : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            scoreboard.SetActive(true);
+            SetActiveScoreboard(true);
         } else if (Input.GetKeyUp(KeyCode.Tab))
         {
-            scoreboard.SetActive(false);
+            SetActiveScoreboard(false);
         }
     }
 
@@ -50,6 +51,11 @@ public class PlayerUI : MonoBehaviour
     {
         pauseMenu.SetActive(!pauseMenu.activeSelf);
         PauseMenu.isOn = pauseMenu.activeSelf;
+    }
+
+    public void SetActiveScoreboard(bool isActive)
+    {
+        scoreboard.SetActive(isActive);
     }
 
     void SetAmmoAmount(int _ammount)

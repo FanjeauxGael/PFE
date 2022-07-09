@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Mirror;
+using UnityEngine.Networking.PlayerConnection;
 
-public class GameManager : MonoBehaviour
+public class GameManager : NetworkBehaviour
 {
     private const string playerIdPrefix = "Player";
 
@@ -14,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject sceneCamera;
+
 
     public delegate void OnPlayerKilledCallback(string player, string source);
     public OnPlayerKilledCallback onPlayerKilledCallback;
@@ -38,7 +41,29 @@ public class GameManager : MonoBehaviour
         sceneCamera.SetActive(isActive);
     }
 
-    public static void RegisterPlayer(string netID, Player player)
+    public void endGame()
+    {
+
+        Application.Quit();
+
+    }
+
+    public void checkKills()
+    {
+        Player[] players = GetAllPlayers();
+
+        foreach (Player player in players)
+        {
+            if (player.kills >= GameManager.instance.matchSettings.nbKill)
+            {
+                GameManager.instance.SetSceneCameraActive(true);
+                GameManager.instance.endGame();
+            }
+        }
+    }
+
+
+public static void RegisterPlayer(string netID, Player player)
     {
         string playerId = playerIdPrefix + netID;
         players.Add(playerId, player);
