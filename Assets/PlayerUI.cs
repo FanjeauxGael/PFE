@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Player))]
 public class PlayerUI : MonoBehaviour
 {
     private Player player;
@@ -15,7 +16,13 @@ public class PlayerUI : MonoBehaviour
 
     [SerializeField]
     private Text ammoText;
-   
+
+    [SerializeField]
+    public GameObject loose;
+
+    [SerializeField]
+    public GameObject win;
+
     public void SetPlayer(Player _player)
     {
         player = _player;
@@ -44,6 +51,17 @@ public class PlayerUI : MonoBehaviour
         } else if (Input.GetKeyUp(KeyCode.Tab))
         {
             SetActiveScoreboard(false);
+        }
+
+        if (player.kills >= GameManager.instance.matchSettings.nbKill)
+        {
+            SetActiveScoreboard(true);
+            win.SetActive(true);
+        }
+        if (player.deaths >= GameManager.instance.matchSettings.nbKill)
+        {
+            SetActiveScoreboard(true);
+            loose.SetActive(true);
         }
     }
 

@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Linq;
 using Mirror;
 using UnityEngine.Networking.PlayerConnection;
+using System.Collections;
 
 public class GameManager : NetworkBehaviour
 {
@@ -43,9 +44,7 @@ public class GameManager : NetworkBehaviour
 
     public void endGame()
     {
-
         Application.Quit();
-
     }
 
     public void checkKills()
@@ -57,13 +56,12 @@ public class GameManager : NetworkBehaviour
             if (player.kills >= GameManager.instance.matchSettings.nbKill)
             {
                 GameManager.instance.SetSceneCameraActive(true);
-                GameManager.instance.endGame();
+                //GameManager.instance.endGame();
             }
         }
     }
 
-
-public static void RegisterPlayer(string netID, Player player)
+    public static void RegisterPlayer(string netID, Player player)
     {
         string playerId = playerIdPrefix + netID;
         players.Add(playerId, player);
