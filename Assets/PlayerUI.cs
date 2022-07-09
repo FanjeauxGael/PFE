@@ -58,7 +58,7 @@ public class PlayerUI : MonoBehaviour
             SetActiveScoreboard(true);
             win.SetActive(true);
         }
-        if (player.deaths >= GameManager.instance.matchSettings.nbKill)
+        if ((player.deaths - player.suicide) >= GameManager.instance.matchSettings.nbKill)
         {
             SetActiveScoreboard(true);
             loose.SetActive(true);

@@ -23,6 +23,7 @@ public class Player : NetworkBehaviour
 
     public int kills;
     public int deaths;
+    public int suicide;
 
     [SerializeField]
     private Behaviour[] disableOnDeath;
@@ -161,6 +162,11 @@ public class Player : NetworkBehaviour
             sourcePlayer.kills++;
             GameManager.instance.onPlayerKilledCallback.Invoke(transform.name, sourcePlayer.name);
             
+        }
+
+        if (sourcePlayer.name != transform.name)
+        {
+            suicide++;
         }
 
         deaths++;
