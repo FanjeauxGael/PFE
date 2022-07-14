@@ -199,8 +199,6 @@ public class Player : NetworkBehaviour
         GameObject _gfxIns = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(_gfxIns, 3f);
 
-        GameManager.instance.checkKills();
-
         if (isLocalPlayer)
         {
             GameManager.instance.SetSceneCameraActive(true);

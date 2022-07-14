@@ -47,18 +47,11 @@ public class GameManager : NetworkBehaviour
         Application.Quit();
     }
 
-    public void checkKills()
+    public IEnumerator checkKills()
     {
-        Player[] players = GetAllPlayers();
-
-        foreach (Player player in players)
-        {
-            if (player.kills >= GameManager.instance.matchSettings.nbKill)
-            {
-                GameManager.instance.SetSceneCameraActive(true);
-                //GameManager.instance.endGame();
-            }
-        }
+        GameManager.instance.SetSceneCameraActive(true);
+        yield return new WaitForSeconds(10);
+        GameManager.instance.endGame();
     }
 
     public static void RegisterPlayer(string netID, Player player)
