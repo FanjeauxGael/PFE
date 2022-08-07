@@ -4,7 +4,6 @@ using Mirror;
 using System.Collections;
 
 [RequireComponent(typeof(PlayerSetup))]
-[RequireComponent(typeof(PlayerUI))]
 public class Player : NetworkBehaviour
 {
     private bool _isDead = false;
