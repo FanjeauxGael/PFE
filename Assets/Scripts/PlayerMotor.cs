@@ -24,10 +24,6 @@ public class PlayerMotor : MonoBehaviour
 
     public void Update()
     {
-        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }
     }
 
     private bool IsGrounded()

@@ -163,7 +163,7 @@ public class Player : NetworkBehaviour
             
         }
 
-        if (sourcePlayer.name != transform.name)
+        if (sourcePlayer.name == transform.name)
         {
             suicide++;
         }
