@@ -5,7 +5,7 @@ using UnityEngine;
 public class gyroScript : MonoBehaviour
 {
     private void Start()
-    {
+    {       
         if (SystemInfo.supportsGyroscope)
         {
             Input.gyro.enabled = true;
@@ -21,8 +21,8 @@ public class gyroScript : MonoBehaviour
         }
     }
     private Quaternion GyroToUnity(Quaternion q)
-    {
-        //return new Quaternion(q.x, q.y, -q.z, -q.w
+    { 
+        //return new Quaternion(q.x, q.y, -q.z, -q.w);
         return new Quaternion(0.5f, 0.5f, -0.5f, 0.5f) * Input.gyro.attitude * new Quaternion(0, 0, 1, 0);
     }
 }
