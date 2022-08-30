@@ -40,15 +40,16 @@ public class PlayerUI : MonoBehaviour
     {
         SetAmmoAmount(weaponManager.currentMagazineSize);
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape | KeyCode.Joystick1Button1))
         {
             TogglePauseMenu();
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab | KeyCode.JoystickButton3))
         {
             SetActiveScoreboard(true);
-        } else if (Input.GetKeyUp(KeyCode.Tab))
+        }
+        else if (Input.GetKeyUp(KeyCode.Tab | KeyCode.JoystickButton3))
         {
             SetActiveScoreboard(false);
         }
