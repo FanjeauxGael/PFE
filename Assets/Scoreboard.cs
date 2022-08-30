@@ -10,6 +10,7 @@ public class Scoreboard : MonoBehaviour
     [SerializeField]
     Transform playerScoreboardList;
 
+
     private void OnEnable()
     {
         Player[] players = GameManager.GetAllPlayers();
