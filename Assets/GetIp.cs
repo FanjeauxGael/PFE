@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Net;
+using System.Net.Sockets;
 
 public class GetIp : MonoBehaviour
 {
@@ -11,9 +12,15 @@ public class GetIp : MonoBehaviour
 
     public static string GetLocalIPAddress()
     {
-
-        string externalIpString = new WebClient().DownloadString("http://icanhazip.com").Replace("\\r\\n", "").Replace("\\n", "").Trim();
-
+        var host = Dns.GetHostEntry(Dns.GetHostName());
+        string externalIpString = null;
+        foreach (var ip in host.AddressList)
+        {
+            if (ip.AddressFamily == AddressFamily.InterNetwork)
+            {
+                externalIpString = ip.ToString();
+            }
+        }
         return externalIpString;
     }
 
